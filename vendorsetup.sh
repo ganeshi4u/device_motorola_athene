@@ -1,1 +1,1 @@
-add_lunch_combo slim_athene-userdebug
+add_lunch_combo lineage_athene-userdebug
