@@ -82,7 +82,12 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libtinyxml \
     tinymix
-
+    
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
+    
 # Audio
 PRODUCT_PACKAGES += \
     audio.primary.msm8952
