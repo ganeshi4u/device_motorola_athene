@@ -13,9 +13,13 @@
 # limitations under the License.
 
 # Inherit some common slim stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
 
-$(call inherit-product, device/motorola/athene/full_athene.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from athene device
+$(call inherit-product, device/motorola/athene/device.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -24,7 +28,7 @@ TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := athene
-PRODUCT_NAME := lineage_athene
+PRODUCT_NAME := dot_athene
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := athene
